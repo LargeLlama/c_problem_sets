@@ -1,0 +1,63 @@
+A. Simple C program
+1. Refer to pi.c
+
+	a. In what line is TEST_VALS defined?
+		In line 2, it is defined as an array consisting of -1, 0, 1, 2, 10, 100
+
+	b. In what line is TEST_VALS used?
+		TEST_VALS is first used in line 20, when the temporary variable vals[] is set equal to it
+
+	c. What characters mark... comments? 
+			// or /* and *//
+	d. characters strings? 
+			""
+	e. the start and end of a block of code?
+			{ }
+	f. How many functions are defined in the code? List their names
+		Functions:
+			estimatePi(int terms)	return type - double
+			testEstimatePi() 		return type - void
+			interact()		 		return type - void
+			main()					return type - void (?)
+		Total # of functions - 4
+		
+	g. What is the return type for estimatePi()?
+		double
+
+	h. What are the input parameters for estimatePi()?
+		int terms
+
+	i. What keyword marks a function with no return value?
+		void
+
+	j. What function actually prints text?
+		interact() and testEstimatePi()
+
+	k. Languages structures that control the order of code are called control structures (e.g. if, for, while).
+	   Which control structures look like Java or C#?
+		the if and else blocks look like Java, as well as the for and while loops
+	
+2. Describe how you would change this program to add a test for 1000 terms. For each change specify the line number and describe what the change should be. 
+	I would change line 2, which defines the variable TEST_VALS, to { -1, 0, 1, 2, 10, 100, 1000}. I would add the element 1000 to that int array.
+	This would allow for the number 1000 to be tested as an input for the testEstimtatePi() function.
+
+B. Preprocessor Directives
+
+1. Use the instructions above (refer to notes) to write C directives that...
+
+	a. include math.h
+		#include <math.h>
+
+	b. Define PI to be 3.14159
+		#define PI 3.14159
+
+	c. Define SUM3 to take 3 values and return their sum
+		#define SUM3(A,B,C) ((A) + (B) + (C))
+
+2. Which approach (function or macro)...
+	a. evaluates arguments before passing them to the body?
+		function
+	b. uses extra time and memory?
+		function
+	c. is likely to be faster?
+		macro
