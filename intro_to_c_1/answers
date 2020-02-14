@@ -116,4 +116,4 @@ D. Text Input and Output (I/O)
 	   Explain why it is often easier to scan a full line as a string, and then scan that string.
 	Because you are guaranteed that the input will at the very least be a string, and then you can parse and work with that string
 
-	8. Refer to answer.c
+	8. Refer to stat.c

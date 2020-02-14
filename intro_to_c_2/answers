@@ -1,0 +1,92 @@
+Rubin Peci
+Intro to C part 2 - Pointers
+
+A. Memory Addresses
+	1. Variable declaration
+		a. 3 variables declared
+
+		b. 3.14
+
+		c. 22
+
+		d. @ '0408' is 'A'
+
+		e. 0802 is used for f
+
+		f. @ '0400' is 22
+
+		g. It's easier to write programs that use variable names because we have choice and we can appropriately label variables for their use
+
+	2. For primitive types...
+		a. An int is 8 bytes
+
+		b. An array of 10 float values would need 10 * 4 bytes, or 40
+
+		c. An array of 20 characters would need 20 bytes
+
+B. Pointers 
+	1. High-level languages try to hide memory addresses from programmers, but C allows you to see and modify them
+		a. The '*' characters indicates the variable will store an address
+
+		b. The address of operator is '&'
+
+		c. The dereference operator is '*'
+
+		d. The '*' characters is used in two ways - to indicate a variable will store an address and to dereference it.
+
+	2. 
+		a. float f;
+		   float g;
+
+		b. float * q;
+		   float * r;
+
+		c. q = &f;
+		   r = &g;
+		d. f /= 2;
+
+		e. g = (*q) / 2;
+
+		f. (*r) = f / 2;
+
+	3. A variable that contains is a pointer because it literally points to a memory address.
+
+	4. The first instance of *b is setting its value to be the address of a, while the second use is to dereference it and add 2 to a.
+	   We know the difference because it is being initialized the first time around as a pointer to an int.
+
+	5. The final value of a is 6 because we add 2 to a twice; once by a += 2; and again by *b += 2;
+
+	6. The value of a pointer is an address of something else in memory
+		a. 2 variables are declared
+		
+		b. 2004
+
+		c. 2008
+
+		d. 265
+
+		e. 2012
+
+		f. 2004
+
+		g. i
+
+		h. j
+
+		i. 2004
+
+		j. 265
+
+		k. j
+
+	7. The alias for i is q. The alias for j is p. Aliasing can provide problems because you have two variables referencing to the same place
+	   in memory, which means there are more ways to mess up the value of the variable.
+
+	8. Problems with types
+		a. 'i' is declared as an int but a float is provided.
+
+		b. 'p' is a pointer but has an integer value stored in it, not a memory address.
+
+		c. 'p' is a pointer for a float but points to the memory address for an integer.
+
+		d. 'q' is declared and initialized as pointing to j but then points to k.
